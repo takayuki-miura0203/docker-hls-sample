@@ -21,12 +21,15 @@ curl -i -X POST \
 
 ### play
 1. create docker container
+
 ```bash
 docker-compose up
 ```
 
 2. play on browser
+
 check `http://front:8080/index.php?name={audio_file_name}`
 
 3. also, you can fetch stream audio file directly
+
 check `http://storage:8080/{audio_file_name}/playlist.m3u8`
