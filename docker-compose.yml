@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - 8080:80
+    links:
+      - front
+      - storage
+    volumes:
+      - ./web/conf.d:/etc/nginx/conf.d
+  front:
+    build: ./front
+    volumes:
+      - ./front/php.ini:/usr/local/etc/php/php.ini
+      - ./front/app:/app
+  storage:
+    build: ./storage
+    volumes:
+      - ./storage/php.ini:/usr/local/etc/php/php.ini
+      - ./storage/app/public:/var/www/html
