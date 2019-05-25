@@ -1,4 +1,5 @@
 # docker-hls-sample
+Sample code of create / play audio in streaming using HTTP Live Streaming (HLS) on docker
 
 ## environment
 Everywhere only if docker is enabled.
