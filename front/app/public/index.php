@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // delete audio file if exists
     $fileInfo = pathinfo($_FILES['audio']['name']);
-    if (!file_exists($fileInfo['filename'])) {
+    if (file_exists($fileInfo['filename'])) {
         exec("rm -rf {$fileInfo['filename']}");
     }
 
