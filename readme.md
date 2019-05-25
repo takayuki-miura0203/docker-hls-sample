@@ -17,7 +17,7 @@ docker-compose up
 ```bash
 curl -i -X POST \
    -H "Content-Type:multipart/form-data" \
-   -F "audio=@\"{audio_file}\";type={file_type};filename=\"{audio_file_name}\"" \
+   -F "audio=@\"{audio_file}\";type=audio/x-m4a;filename=\"{audio_file_name}\"" \
  'http://front:8080/index.php'
 ```
 
