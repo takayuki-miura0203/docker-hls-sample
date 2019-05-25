@@ -12,7 +12,8 @@ docker-compose up
 ```
 
 2. POST audio file you'd like to play in streaming
-*only m4a file is allowed.*
+
+**only m4a file is allowed.**
 
 ```bash
 curl -i -X POST \
